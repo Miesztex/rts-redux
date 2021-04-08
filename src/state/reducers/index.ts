@@ -7,3 +7,7 @@ const reducers = combineReducers({
 });
 
 export default reducers;
+
+// declare that root store data is combined reducers
+// === RepositoriesState
+export type RootState = ReturnType<typeof reducers>;
