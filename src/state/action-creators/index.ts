@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 import { ActionType } from '../actions-types';
 import { Action } from '../actions';
 
-const searchRepositories = (term: string) => {
+export const searchRepositories = (term: string) => {
 	return async (dispatch: Dispatch<Action>) => {
 		dispatch({ type: ActionType.SEARCH_REPOSITORIES });
 		try {
@@ -15,7 +15,7 @@ const searchRepositories = (term: string) => {
 					},
 				}
 			);
-			const names = data.objcects.map((result: any) => {
+			const names = data.objects.map((result: any) => {
 				return result.package.name;
 			});
 			dispatch({
