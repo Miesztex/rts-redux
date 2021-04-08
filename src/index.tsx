@@ -1,12 +1,9 @@
 import ReactDOM from 'react-dom';
-const App = () => {
-	return (
-		<div>
-			<h1>Hello</h1>
-		</div>
-	);
+import App from './components/App';
+const Main: React.FC = () => {
+	return <App></App>;
 };
 
-export default App;
+export default Main;
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<Main />, document.querySelector('#root'));
